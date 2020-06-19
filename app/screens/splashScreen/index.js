@@ -13,9 +13,7 @@ const SplashScreen = () => {
 
   return (
     <View style={styles.container}>
-      <ImageBackground
-        style={styles.background}
-        source={image.SPLASH_SCREEN_BACKGROUND}>
+      <ImageBackground style={styles.background}>
         <Animated.Image
           style={[styles.logo, {opacity: fadeAnimLogoValue}]}
           source={image.SPLASH_SCREEN_LOGO}

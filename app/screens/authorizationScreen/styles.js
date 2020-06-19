@@ -1,17 +1,16 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 import {color} from '../../services/utils/colors';
 import {dimension} from '../../services/utils/constants';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: color.WHITE,
+    alignItems: 'center',
+    justifyContent: 'flex-end',
   },
   background: {
-    flex: 1,
-    justifyContent: 'flex-end',
-    alignItems: 'center',
-    resizeMode: 'cover',
+    width: Dimensions.get('window').width,
+    height: Dimensions.get('window').height,
   },
   logo: {
     position: 'absolute',
@@ -19,17 +18,36 @@ export const styles = StyleSheet.create({
     resizeMode: 'contain',
   },
   loginInput: {
-    width: '80%',
+    width: dimension.AUTH_TEXT_INPUT_WIDTH,
     backgroundColor: 'white',
     marginBottom: 10,
     borderColor: 'gray',
     borderWidth: 1,
   },
   passwordInput: {
-    width: '80%',
+    width: dimension.AUTH_TEXT_INPUT_WIDTH,
     backgroundColor: 'white',
-    marginBottom: '30%',
     borderColor: 'gray',
     borderWidth: 1,
+  },
+  logButton: {
+    marginVertical: 10,
+    width: dimension.LOG_IN_BUTTON_WIDTH,
+    alignItems: 'center',
+    paddingVertical: 10,
+  },
+  forgotButton: {
+    marginBottom: '20%',
+    width: dimension.FORGOT_BUTTON_WIDTH,
+    alignItems: 'center',
+    paddingVertical: 10,
+  },
+  logButtonText: {
+    fontSize: 18,
+  },
+  forgotButtonText: {
+    fontSize: 18,
+    color: color.FORGOT_PASSWORD_BUTTON_COLOR,
+    textDecorationLine: 'underline',
   },
 });
