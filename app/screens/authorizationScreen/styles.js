@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
   background: {
     width: Dimensions.get('window').width,
     height: Dimensions.get('window').height,
+    position: 'absolute',
   },
   logo: {
     position: 'absolute',

@@ -5,4 +5,5 @@ export const string = {
   LOG_IN: 'LOG IN',
   MAIN: 'MAIN',
   COMMENTS: 'COMMENTS',
+  SIGNED: 'SIGNED',
 };

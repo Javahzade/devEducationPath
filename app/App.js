@@ -11,7 +11,7 @@ const App = props => {
   useEffect(() => {
     setTimeout(() => {
       setCurrentScreen(string.AUTHORIZATION_SCREEN);
-    }, 5000);
+    }, 0);
   }, []);
 
   switch (currentScreen) {
