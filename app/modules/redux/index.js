@@ -11,5 +11,7 @@ export const authReducer = (state = authInitialState, action) => {
         ...state,
         isSigned: true,
       };
+      default:
+        return state;
   }
 };

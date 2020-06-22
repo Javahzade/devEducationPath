@@ -10,7 +10,6 @@ import {styles} from './styles';
 import {useDispatch} from 'react-redux';
 import {authAction} from '../../modules/redux/actions';
 import {SvgImage} from '../../src/img/svgIcons';
-import {string} from '../../services/utils/strings';
 import {svgPath} from '../../services/utils/svgPaths';
 
 const AuthorizationScreen = () => {

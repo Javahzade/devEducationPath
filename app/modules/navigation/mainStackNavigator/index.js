@@ -8,7 +8,7 @@ const MainStack = createStackNavigator();
 
 const MainStackNavigator = () => {
   return (
-    <MainStack.Navigator>
+    <MainStack.Navigator screenOptions={{headerShown: false}}>
       <MainStack.Screen name={string.MAIN} component={MainScreen} />
       <MainStack.Screen name={string.COMMENTS} component={CommentsScreen} />
     </MainStack.Navigator>

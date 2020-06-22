@@ -8,7 +8,7 @@ import MainStackNavigator from './modules/navigation/mainStackNavigator';
 import {styles} from './styles';
 import {string} from './services/utils/strings';
 
-const App = () => {
+const App = props => {
   const [currentScreen, setCurrentScreen] = useState(string.SPLASH_SCREEN);
   useEffect(() => {
     setTimeout(() => {
@@ -22,7 +22,7 @@ const App = () => {
     case string.AUTHORIZATION_SCREEN:
       return (
         <NavigationContainer>
-          <AuthStackNavigator />
+          {props.isSigned ? <MainStackNavigator /> : <AuthStackNavigator />}
         </NavigationContainer>
       );
   }
@@ -33,5 +33,11 @@ const App = () => {
     {currentScreen}
   );
 };
+const mapStateToProps = state => {
+  console.log(state);
+  return {
+    isSigned: state.isSigned,
+  }
+}
 
-export default App;
+export default connect(mapStateToProps, null)(App);
