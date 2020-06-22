@@ -1,12 +1,14 @@
 import React, {useState, useEffect} from 'react';
-import {Platform, SafeAreaView, View, Text} from 'react-native';
+import {Platform, SafeAreaView} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
+import {connect} from 'react-redux';
 import SplashScreen from './screens/splashScreen';
 import AuthStackNavigator from './modules/navigation/authStackNavigator';
+import MainStackNavigator from './modules/navigation/mainStackNavigator';
 import {styles} from './styles';
 import {string} from './services/utils/strings';
 
-const App = props => {
+const App = () => {
   const [currentScreen, setCurrentScreen] = useState(string.SPLASH_SCREEN);
   useEffect(() => {
     setTimeout(() => {
@@ -31,4 +33,5 @@ const App = props => {
     {currentScreen}
   );
 };
+
 export default App;

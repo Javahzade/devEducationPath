@@ -11,11 +11,11 @@ import {authReducer} from './app/modules/redux';
 import {name as appName} from './app.json';
 
 const store = createStore(authReducer, applyMiddleware(logger));
-const MyApp = () => {
+const AppContainer = () => {
   return (
     <Provider store={store}>
       <App />
     </Provider>
   );
 };
-AppRegistry.registerComponent(appName, () => MyApp);
+AppRegistry.registerComponent(appName, () => AppContainer);

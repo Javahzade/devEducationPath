@@ -6,45 +6,46 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
+  },
+  authBox: {
+    width: dimension.AUTH_TEXT_INPUT_WIDTH,
+    backgroundColor: 'rgba(9, 153, 179, 0.5)',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 5,
+    paddingVertical: '10%',
   },
   background: {
     width: Dimensions.get('window').width,
     height: Dimensions.get('window').height,
     position: 'absolute',
+    transform: [{rotate: '-90deg'}, {scale: 2}],
   },
-  logo: {
-    position: 'absolute',
-    width: dimension.AUTH_LOGO_WIDTH,
-    resizeMode: 'contain',
-  },
-  loginInput: {
+  authInput: {
     width: dimension.AUTH_TEXT_INPUT_WIDTH,
     backgroundColor: 'white',
+    borderRadius: 5,
     marginBottom: 10,
-    borderColor: 'gray',
-    borderWidth: 1,
+    paddingLeft: 8,
   },
-  passwordInput: {
-    width: dimension.AUTH_TEXT_INPUT_WIDTH,
-    backgroundColor: 'white',
-    borderColor: 'gray',
-    borderWidth: 1,
-  },
-  logButton: {
-    marginVertical: 10,
+  loginButton: {
     width: dimension.LOG_IN_BUTTON_WIDTH,
     alignItems: 'center',
-    paddingVertical: 10,
+    backgroundColor: '#114466',
+    borderRadius: 5,
+    marginBottom: 10,
+    paddingVertical: 5,
+    paddingHorizontal: 5,
   },
   forgotButton: {
-    marginBottom: '20%',
-    width: dimension.FORGOT_BUTTON_WIDTH,
     alignItems: 'center',
-    paddingVertical: 10,
+    paddingVertical: 5,
+    paddingHorizontal: 5,
   },
-  logButtonText: {
+  loginButtonText: {
     fontSize: 18,
+    color: color.WHITE,
   },
   forgotButtonText: {
     fontSize: 18,

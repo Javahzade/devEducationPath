@@ -4,14 +4,14 @@ import MainScreen from '../../../screens/mainScreen';
 import CommentsScreen from '../../../screens/commentsScreen';
 import {string} from '../../../services/utils/strings';
 
-const AuthStack = createStackNavigator();
+const MainStack = createStackNavigator();
 
-const AuthStackNavigator = () => {
+const MainStackNavigator = () => {
   return (
-    <AuthStack.Navigator>
-      <AuthStack.Screen name={string.MAIN} component={MainScreen} />
-      <AuthStack.Screen name={string.COMMENTS} component={CommentsScreen} />
-    </AuthStack.Navigator>
+    <MainStack.Navigator>
+      <MainStack.Screen name={string.MAIN} component={MainScreen} />
+      <MainStack.Screen name={string.COMMENTS} component={CommentsScreen} />
+    </MainStack.Navigator>
   );
 }
-export default AuthStackNavigator;
+export default MainStackNavigator;
